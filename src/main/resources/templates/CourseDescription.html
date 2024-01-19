@@ -1,0 +1,28 @@
+<!--Display detailed information about a specific course-->
+<!--Include course description, lecturer, times, location and the number of registered students-->
+<!--Option to join or drop the course-->
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <h1>Course Details Page</h1>
+</head>
+<body>
+<h2 th:text="${course.course_name}"></h2>
+<p th:text="${course.description}"></p>
+<p th:text="${course.lecturer}"></p>
+<p th:text="${course.schedule}"></p>
+<p th:text="${course.location}"></p>
+<p th:text="${course.maxCapacity}"></p>
+<p th:text="${registeredStudentsCount} + ' students registered'"></p>
+
+
+<form th:action="@{/courses/join}" method="post">
+    <input type="hidden" name="courseId" th:value="${course.id}" />
+    <button type="submit" th:if="${not isRegistered}">Join Course</button>
+</form>
+<form th:action="@{/courses/drop}" method="post">
+    <input type="hidden" name="courseId" th:value="${course.id}" />
+    <button type="submit" th:if="${isRegistered}">Drop Course</button>
+</form>
+</body>
+</html>
