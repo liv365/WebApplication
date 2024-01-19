@@ -1,0 +1,29 @@
+<!--Display a list of feedback for a specific course-->
+<!--Ordered by date with the average rating displayed-->
+
+<!-- LeaveFeedback.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Add your head content here -->
+</head>
+<body>
+<h1>Leave Feedback for ${course.courseName}</h1>
+
+<form th:action="@{/leave-feedback}" method="post">
+    <input type="hidden" th:name="courseId" th:value="${course.id}" />
+
+    <div>
+        <label for="description">Description (not more than 1000 characters):</label><br />
+        <textarea id="description" name="description" rows="4" cols="50" maxlength="1000" required></textarea>
+    </div>
+
+    <div>
+        <label for="rating">Rating (1 to 5):</label><br />
+        <input type="number" id="rating" name="rating" min="1" max="5" required />
+    </div>
+
+    <button type="submit">Submit Feedback</button>
+</form>
+</body>
+</html>
