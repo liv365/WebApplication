@@ -1,0 +1,19 @@
+<!--Display  a list of 8 rated courses-->
+<!--Show course names and average rating-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Add your head content here -->
+</head>
+<body>
+<h1>Top Rated Courses</h1>
+
+<ul th:if="${not #lists.isEmpty(topRatedCourses)}">
+    <li th:each="course : ${topRatedCourses}">
+        <h2 th:text="${course.courseName}"></h2>
+        <p th:text="'Average Rating: ' + ${course.averageRating}"></p>
+    </li>
+</ul>
+<p th:if="${#lists.isEmpty(topRatedCourses)}">No top-rated courses available.</p>
+</body>
+</html>
