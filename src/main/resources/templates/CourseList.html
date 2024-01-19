@@ -1,0 +1,49 @@
+<!--Display a list of all available courses-->
+<!--Include options to join or drop a course-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+</head>
+
+<body>
+<h2>All Available Courses</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Course ID</th>
+        <th>Course Name</th>
+        <th>Description</th>
+        <th>Lectures</th>
+        <th>Schedule</th>
+        <th>Location</th>
+        <th>Max Capacity</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="course : ${courses}">
+        <td th:text="${course.id}"></td>
+        <td th:text="${course.courseName}"></td>
+        <td th:text="${course.description}"></td>
+        <td th:text="${course.lectures}"></td>
+        <td th:text="${course.schedule}"></td>
+        <td th:text="${course.location}"></td>
+        <td th:text="${course.maxCapacity}"></td>
+        <td>
+            <a th:href="@{/courses/{courseId}(courseId=${course.id})}">Details</a>
+            <form th:action="@{/courses/join}" method="post">
+                <input type="hidden" name="courseId" th:value="${course.id}" />
+                <button type="submit">Join</button>
+            </form>
+            <form th:action="@{/courses/drop}" method="post">
+                <input type="hidden" name="courseId" th:value="${course.id}" />
+                <button type="submit">Drop</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+
+</html>
