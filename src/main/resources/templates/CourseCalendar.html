@@ -1,0 +1,35 @@
+<!--Display all courses in a calendar view-->
+<!--Show dates , times and names of courses-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <h1>Course Calendar</h1>
+</head>
+<body>
+<div class="calendar">
+    <h2>Course Calendar</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Course Name</th>
+            <th>Description</th>
+            <th>Lecturer</th>
+            <th>Schedule</th>
+            <th>Location</th>
+            <th>Max Capacity</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Iterate over courses and display each course in a row -->
+        <tr th:each="course : ${courses}">
+            <td th:text="${course.course_name}"></td>
+            <td th:text="${course.description}"></td>
+            <td th:text="${course.lecturer}"></td>
+            <td th:text="${course.schedule}"></td>
+            <td th:text="${course.location}"></td>
+            <td th:text="${course.maxCapacity}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
