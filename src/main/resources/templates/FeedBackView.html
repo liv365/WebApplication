@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Here you can view the feedbacks for this course.</title>
+</head>
+<body>
+<h2>Feedback List</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Feedback Date</th>
+        <th>User</th>
+        <th>Description</th>
+        <th>Rating</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="feedback : ${feedbackList}">
+        <td th:text="${feedback.feedbackDate}"></td>
+        <td th:text="${feedback.user.username}"></td>
+        <td th:text="${feedback.description}"></td>
+        <td th:text="${feedback.rating}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>Average Rating</h2>
+<p th:text="${averageRating}"></p>
+</body>
+</html>
