@@ -1,0 +1,355 @@
+<!--&lt;!&ndash;Form to capture user details for creating new account&ndash;&gt;-->
+<!--&lt;!&ndash;Fields for username, password, email&ndash;&gt;-->
+<!--&lt;!&ndash;Submit button to register the user&ndash;&gt;-->
+<!--&lt;!&ndash;Form to capture user credentials for logging in&ndash;&gt;-->
+<!--&lt;!&ndash;Fields for username and password&ndash;&gt;-->
+<!--&lt;!&ndash;Submit button to authenticate the user&ndash;&gt;-->
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:color="http://www.w3.org/1999/xhtml">-->
+<!--&lt;!&ndash; Bootstrap CSS &ndash;&gt;-->
+<!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+<!--<meta name="description" content="Manage your property from BookersDesk.Com with channel manager ( PMS )">-->
+
+<!--<meta name="keywords" content="BookersDesk.Com real time management Channel Manager & rooms management PMS hotel software management">-->
+
+
+<!--&lt;!&ndash; Style &ndash;&gt;-->
+<!--<link rel="stylesheet" href="css/style.css">-->
+
+<!--<link rel="icon" type="images/logo5.png" sizes="16x16" href="./images/logo5.png">-->
+<!--<link-->
+<!--        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"-->
+<!--        rel="stylesheet"-->
+<!--/>-->
+<!--&lt;!&ndash; Google Fonts &ndash;&gt;-->
+<!--<link-->
+<!--        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"-->
+<!--        rel="stylesheet"-->
+<!--/>-->
+<!--MDB-->
+<!--<link-->
+<!--        href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"-->
+<!--        rel="stylesheet"-->
+<!--/>-->
+<!--&lt;!&ndash; MDB &ndash;&gt;-->
+<!--<script-->
+<!--        type="text/javascript"-->
+<!--        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"-->
+<!--&gt;</script>-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+<!--    <title>User Registration</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">-->
+<!--    &lt;!&ndash; Indicators &ndash;&gt;-->
+<!--    <div class="carousel-indicators">-->
+<!--        <button-->
+<!--                type="button"-->
+<!--                data-mdb-target="#carouselBasicExample"-->
+<!--                data-mdb-slide-to="0"-->
+<!--                class="active"-->
+<!--                aria-current="true"-->
+<!--                aria-label="Slide 1"-->
+<!--        ></button>-->
+<!--        <button-->
+<!--                type="button"-->
+<!--                data-mdb-target="#carouselBasicExample"-->
+<!--                data-mdb-slide-to="1"-->
+<!--                aria-label="Slide 2"-->
+<!--        ></button>-->
+<!--        <button-->
+<!--                type="button"-->
+<!--                data-mdb-target="#carouselBasicExample"-->
+<!--                data-mdb-slide-to="2"-->
+<!--                aria-label="Slide 3"-->
+<!--        ></button>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Inner &ndash;&gt;-->
+<!--    <div class="carousel-inner">-->
+<!--        &lt;!&ndash; Single item &ndash;&gt;-->
+<!--        <div class="carousel-item active">-->
+<!--            <img src="images/gkj-min.jpg" class="d-block w-100" alt="Sunset Over the City"/>-->
+<!--            <div class="carousel-caption d-none d-md-block">-->
+<!--                &lt;!&ndash;                <h5>First slide label</h5>&ndash;&gt;-->
+<!--                &lt;!&ndash;                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>&ndash;&gt;-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--    </div>-->
+<!--    &lt;!&ndash; Inner &ndash;&gt;-->
+
+<!--    &lt;!&ndash; Controls &ndash;&gt;-->
+
+<!--</div>-->
+
+
+<!--<div class="content">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-6 contents">-->
+<!--                <div class="row justify-content-center">-->
+<!--                    <div class="col-md-8">-->
+
+
+<!--    <form th:action={"/register"} method="post">-->
+<!--        <div class="row">-->
+<!--&lt;!&ndash;    <label for="username">Username:</label>&ndash;&gt;-->
+<!--&lt;!&ndash;    <input type="text" id="username" name="username" required>&ndash;&gt;-->
+<!--&lt;!&ndash;    <br>&ndash;&gt;-->
+<!--&lt;!&ndash;    <label for="password">Password:</label>&ndash;&gt;-->
+<!--&lt;!&ndash;    <input type="password" id="password" name="password" required>&ndash;&gt;-->
+<!--&lt;!&ndash;    <br>&ndash;&gt;-->
+<!--&lt;!&ndash;    <button type="submit">Register</button>&ndash;&gt;-->
+<!--        <div class="col-md-6 mb-4" style="background: #f5eded;border-radius: 4px;">-->
+<!--          <div class="form-outline">-->
+<!--            <input type="text" id="firstName" class="form-control form-control-lg" />-->
+<!--              <label class="form-label">First name</label>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--              <div class="col-md-6 mb-4">-->
+<!--                  <div class="form-outline" style="background: #f5eded;border-radius: 4px">-->
+<!--                      <input type="text" id="lastName" class="form-control form-control-lg" />-->
+<!--                      <label class="form-label">Last name</label>-->
+<!--                  </div>-->
+<!--              </div>-->
+<!--        </div>-->
+
+<!--            <div class="form-outline mb-4" style="background: #f5eded;border-radius: 4px;width: 103%;margin-left: -12px">-->
+<!--                <input type="text" id="username" class="form-control form-control-lg" oninput="checkIfUserExists()" />-->
+<!--                <label class="form-label">Username</label>-->
+<!--            </div>-->
+<!--            <div class="jsjhsja" id="labeluser" style="display: none">Username is already taken</div>-->
+
+
+<!--            <div class="form-outline mb-4" style="background: #f5eded;border-radius: 4px;width: 103%;margin-left: -12px">-->
+<!--                <input type="text" id="email" class="form-control form-control-lg" />-->
+<!--                <label class="form-label">Email</label>-->
+<!--            </div>-->
+
+<!--            <div class="form-outline mb-4" style="background: #f5eded;border-radius: 4px;width: 103%;margin-left: -12px">-->
+<!--                <input type="password" id="password" class="form-control form-control-lg" onkeyup="checkPassword()"/>-->
+<!--                <label class="form-label">Password</label>-->
+<!--            </div>-->
+
+<!--            <div class="form-outline mb-4" style="background: #f5eded;border-radius: 4px;width: 103%;margin-left: -12px">-->
+<!--                <input type="password" id="repeatPassword" class="form-control form-control-lg" onkeyup="checkPassword()"/>-->
+<!--                <label class="form-label">Repeat Password</label>-->
+<!--            </div>-->
+<!--            <p id="messageSpan" style="margin-left: -12px;margin-top: -15px; font-family: auto"></p>-->
+
+<!--            <br>-->
+
+<!--            <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">-->
+<!--                <button type="button" class="btn btn-primary btn-lg" onclick="signUp()">Register</button>-->
+<!--            </div>-->
+
+<!--<p th:if="${error}" style="color: red" th:text="${error}"></p>-->
+<!--    </form>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+<!--<script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>-->
+<!--&lt;!&ndash; bootstap bundle js &ndash;&gt;-->
+<!--<script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>-->
+<!--&lt;!&ndash; slimscroll js &ndash;&gt;-->
+<!--<script src="assets/vendor/slimscroll/jquery.slimscroll.js"></script>-->
+<!--&lt;!&ndash; main js &ndash;&gt;-->
+<!--<script src="assets/libs/js/main-js.js"></script>-->
+<!--&lt;!&ndash; chart chartist js &ndash;&gt;-->
+<!--<script src="assets/vendor/charts/chartist-bundle/chartist.min.js"></script>-->
+<!--&lt;!&ndash; sparkline js &ndash;&gt;-->
+<!--<script src="assets/vendor/charts/sparkline/jquery.sparkline.js"></script>-->
+<!--&lt;!&ndash; morris js &ndash;&gt;-->
+<!--<script src="assets/vendor/charts/morris-bundle/raphael.min.js"></script>-->
+<!--<script src="assets/vendor/charts/morris-bundle/morris.js"></script>-->
+<!--&lt;!&ndash; chart c3 js &ndash;&gt;-->
+<!--<script src="assets/vendor/charts/c3charts/c3.min.js"></script>-->
+<!--<script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>-->
+<!--<script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>-->
+<!--<script src="assets/libs/js/dashboard-ecommerce.js"></script>-->
+<!--&lt;!&ndash;sweetalert&ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>-->
+
+<!--<script th:inline="javascript">-->
+<!--function checkIfUserExists(){-->
+<!--$.post("/checkIfUserExists", {username: $(#username).val()}), function(response) {-->
+<!--    if (response == 0) {-->
+<!--        $("#labelUser").css({"display": "block"});-->
+<!--        console.log("Username is already taken");-->
+<!--        $('#butonisubmit').prop('disabled', true);-->
+<!--    } else {-->
+<!--        console.log("");-->
+<!--        $("#labeluser").css({"display": "none"});-->
+<!--    }-->
+<!--    $('#butonisubmit').prop('disabled', false);-->
+<!--  };-->
+<!-- }-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body>
+<h2>Registration Form</h2>
+<form action="#" th:action="@{/registration}" th:object="${user}" method="post">
+
+    <div class="row">
+        <div class="col-md-6 mb-4" style="background: #f5eded;border-radius: 4px;">
+            <div class="form-outline">
+    <label class="form-check-label">First name </label>
+    <input type="text" id="firstName" class="form-control form-control-lg" />
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="form-outline" style="background: #f5eded;border-radius: 4px">
+           <label class="form-check-label">Last name</label>
+            <input type="text" id="lastName" class="form-control form-control-lg" />
+            </div>
+        </div>
+    </div>
+
+
+    <div class="form-outline mb-4" style="background: #f5eded;border-radius: 4px;width: 103%;margin-left: -12px">
+    <label class="form-check-label" for="username">Username:</label>
+    <input type="text" id="username"  required/><br/>
+    </div>
+    <div class="jsjsj" id="labelUser" style="display: none"> Username is already taken! </div>
+
+    <div class="form-outline mb-4" style="background: #f5eded;border-radius: 4px;width: 103%;margin-left: -12px">
+    <label class="form-check-label" for="password">Password:</label>
+    <input type="password" id="password"  required onkeyup="checkPassword()"/><br/>
+    </div>
+
+    <div class="form-outline mb-4" style="background: #f5eded;border-radius: 4px;width: 103%;margin-left: -12px">
+        <label class="form-label">Repeat Password</label>
+     <input type="password" id="repeatPassword" class="form-control form-control-lg" onkeyup="checkPassword()" />
+    </div>
+
+    <p id="messageSpan" style="margin-left: -12px; margin-top: -15px; font-family: auto"></p>
+<br>
+
+    <div class="form-outline mb-4" style="background: #f5eded;border-radius: 4px;width: 103%;margin-left: -12px">
+        <label class="form-check-label" for="email">Email:</label>
+        <input type="email" id="email" required/><br/>
+    </div>
+
+    <button type="button" class="btn btn-primary btn-lg" onclick="signUp()">Register</button>
+     </form>
+
+<!-- ============================================================== -->
+<script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+<!-- bootstap bundle js -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+<!-- slimscroll js -->
+<script src="assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+<!-- main js -->
+<script src="assets/libs/js/main-js.js"></script>
+<!-- chart chartist js -->
+<script src="assets/vendor/charts/chartist-bundle/chartist.min.js"></script>
+<!-- sparkline js -->
+<script src="assets/vendor/charts/sparkline/jquery.sparkline.js"></script>
+<!-- morris js -->
+<script src="assets/vendor/charts/morris-bundle/raphael.min.js"></script>
+<script src="assets/vendor/charts/morris-bundle/morris.js"></script>
+<!-- chart c3 js -->
+<script src="assets/vendor/charts/c3charts/c3.min.js"></script>
+<script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
+<script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
+<script src="assets/libs/js/dashboard-ecommerce.js"></script>
+<!--sweetalert-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script th:inline="javascript">
+
+    function checkPassword(){
+        var password = document.getElementById("password");
+        var confirm_pass = document.getElementById("repeatPassword");
+
+    if(password.value ==confirm_pass.value){
+        document.getElementById("messageSpan").innerHtml = 'Matching';
+        document.getElementById("messageSpan").style.color = 'green';
+    }else if (password.value != confirm_pass.value){
+        document.getElementById("messageSpan").style.color='red';
+        document.getElementById("messageSpan").innerHTML='Not maching';
+    }else {
+        document.getElementById("messageSpan").style.color='red';
+        document.getElementById("messageSpan").innerHTML = 'Not matching';
+    }
+    }
+
+
+    function signUp(){
+        var userDTO = {};
+
+        userDTO.firstNameDTO= document.getElementById("firstName").value;
+        userDTO.lastNameDTO=document.getElementById("lastName").value;
+        userDTO.usernameDTO = document.getElementById("username").value;
+        userDTO.passworDTO= document.getElementById("password").value;
+        userDTO.emailDTO= document.getElementById("email").value;
+
+        console.log(userDTO.firstNameDTO);
+        console.log(userDTO.lastNameDTO);
+        console.log(userDTO.usernameDTO);
+        console.log(userDTO.passworDTO);
+        console.log(userDTO.emailDTO);
+
+        $.ajax({
+            type: "POST",
+            contentTYpe: "application/json",
+            headers: {'x-my-custom-header' : 'some value'},
+            url: "/registration",
+            data: JSON.stringify(userDTO),
+            dataType: 'json',
+            cache:false,
+            timeout: 600000,
+            success: function (response){
+                console.log(response);
+                console.log("success")
+            },
+
+            success: function (response){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Saved successfully',
+                    icon: 'success',
+                }).then(function(){
+                   window.location = "/login";
+                });
+            },
+            error: function (error){
+                console.log(error);
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Error occurred while saving',
+                    icon: 'error'
+                });
+            }
+
+        })
+
+
+    }
+
+</script>
+
+
+</body>
+</html>
