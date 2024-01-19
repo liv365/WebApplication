@@ -1,0 +1,122 @@
+<!--&lt;!&ndash;Form to capture user credentials for logging in&ndash;&gt;-->
+<!--&lt;!&ndash;Fields for username and password&ndash;&gt;-->
+<!--&lt;!&ndash;Submit button to authenticate the user&ndash;&gt;-->
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+<!--    <link rel="stylesheet" href="fonts/icomoon/style.css">-->
+<!--    <link rel="stylesheet" href="css/owl.carousel.min.css">-->
+<!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
+
+
+<!--    <title>User Login upt.edu.al</title>-->
+<!--</head>-->
+
+<!--<body>-->
+<!--<div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">-->
+<!--    &lt;!&ndash; Indicators &ndash;&gt;-->
+<!--    <div class="carousel-indicators">-->
+<!--        <button-->
+<!--                type="button"-->
+<!--                data-mdb-target="#carouselBasicExample"-->
+<!--                data-mdb-slide-to="0"-->
+<!--                class="active"-->
+<!--                aria-current="true"-->
+<!--                aria-label="Slide 1"-->
+<!--        ></button>-->
+<!--        <button-->
+<!--                type="button"-->
+<!--                data-mdb-target="#carouselBasicExample"-->
+<!--                data-mdb-slide-to="1"-->
+<!--                aria-label="Slide 2"-->
+<!--        ></button>-->
+<!--        <button-->
+<!--                type="button"-->
+<!--                data-mdb-target="#carouselBasicExample"-->
+<!--                data-mdb-slide-to="2"-->
+<!--                aria-label="Slide 3"-->
+<!--        ></button>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Inner &ndash;&gt;-->
+<!--    <div class="carousel-inner">-->
+<!--        &lt;!&ndash; Single item &ndash;&gt;-->
+<!--        <div class="carousel-item active">-->
+<!--            <img src="images/gkj-min.jpg" class="d-block w-100" alt="Sunset Over the City"/>-->
+<!--            <div class="carousel-caption d-none d-md-block">-->
+<!--                &lt;!&ndash;                <h5>First slide label</h5>&ndash;&gt;-->
+<!--                &lt;!&ndash;                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>&ndash;&gt;-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--    </div>-->
+<!--    &lt;!&ndash; Inner &ndash;&gt;-->
+
+<!--    &lt;!&ndash; Controls &ndash;&gt;-->
+
+<!--</div>-->
+
+<!--<h2>User Login</h2>-->
+<!--<div class="content">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-6">-->
+<!--                &lt;!&ndash; <img src="images/htf.svg" alt="Image" class="img-fluid"> &ndash;&gt;-->
+<!--            </div>-->
+<!--            <div class="col-md-6 contents">-->
+<!--                <div class="row justify-content-center">-->
+
+<!--                 <form th:action={"/login"} method="post">-->
+<!--&lt;!&ndash;                <label for="username">Username:</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                <input type="text" id="username" name="username" required>&ndash;&gt;-->
+<!--&lt;!&ndash;                 <br>&ndash;&gt;-->
+
+<!--                     <div class="form-group first" style="background-color: transparent ; border-bottom: 0px">-->
+<!--                         <i class="fa fa-user icon"></i>-->
+<!--                         <input type="text" class="form-control" id="exampleInputEmail1" name="email"-->
+<!--                                placeholder="Username" style="padding:5px;border-radius: 0px 5px 5px 0px">-->
+<!--                     </div>-->
+<!--&lt;!&ndash;                 <label for="password">Password:</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <input type="password" id="password" name="password" required>&ndash;&gt;-->
+<!--&lt;!&ndash;                   <br>&ndash;&gt;-->
+<!--                     <div class="form-group last mb-4" style="background-color: transparent; border-bottom: 0px">-->
+<!--                         <i class="fa fa-key icon"></i>-->
+<!--                         <input type="password" class="form-control" id="exampleInputPassword1"-->
+<!--                                name="userpassword" placeholder="Password"-->
+<!--                                style="padding:5px; border-radius: 0px 5px 5px 0px">-->
+<!--                     </div>-->
+
+<!--&lt;!&ndash;                   <button type="submit">Login</button>&ndash;&gt;-->
+<!--                     <input type="submit" value="Log In" class="btn btn-block btn-primary">-->
+
+<!--</form>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<h2>Login</h2>
+<form action="#" th:action="@{/login}" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required/><br/>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required/><br/>
+
+    <button type="submit">Login</button>
+</form>
+</body>
+</html>
