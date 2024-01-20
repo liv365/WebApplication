@@ -1,2 +1,50 @@
 <!--Display user details-->
 <!--List of enrolled courses and submitted feedback-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <!-- Include any necessary stylesheets or scripts -->
+</head>
+<body>
+    <div>
+        <h1>User Profile</h1>
+        <!-- Display user details -->
+        <div>
+            <h2>User Details</h2>
+            <p>Username: {username}</p>
+            <p>Email: {email}</p>
+            <!-- Add more user details as needed -->
+        </div>
+
+        <!-- List of enrolled courses -->
+        <div>
+            <h2>Enrolled Courses</h2>
+            <ul>
+                <!-- Iterate over the user's enrolled courses and display them -->
+                <li>Course 1: {courseName1}</li>
+                <li>Course 2: {courseName2}</li>
+                <!-- Add more courses dynamically -->
+            </ul>
+        </div>
+
+        <!-- List of submitted feedback -->
+        <div>
+            <h2>Submitted Feedback</h2>
+            <ul>
+                <!-- Iterate over the user's submitted feedback and display them -->
+                <li>
+                    <strong>Course: {courseName}</strong>
+                    <p>Description: {feedbackDescription}</p>
+                    <p>Rating: {feedbackRating}</p>
+                    <p>Date: {feedbackDate}</p>
+                </li>
+                <!-- Add more feedback dynamically -->
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
